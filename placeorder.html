@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="header" id="navbar">
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="width:100%;max-width:140px">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="placeorder.html">Place Order</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="register.html">Register</a>
+            <div class="navbar-right">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </nav>
+    </div>
+
+    <h1 style="color: black;">How to Order?</h1>
+<div class="content">
+    <img src="images/Logo.jpeg" alt="Product Logo" style="width:100%;max-width:200px" border="5">
+</div>
+
+
+<main>
+    <h1 style="color: black;">Order can be made via WhatsApp. Please refer to the steps below:</h1>
+    <div class="container3">
+    <ol>
+        <li><strong>Choose the flavour you want.</strong></li>
+        <li><strong>Select the  quantity of the product.</strong></li>
+        <li><strong>Contact our staff to place order &#128241;.</strong></li>
+        <li><strong>Select the delivery option.</strong></li>
+        <li><strong>Select your payment method.</strong></li>
+        <li><strong>Check your mailbox &#128231; to receive order
+         confirmation details.</strong></li>
+    </ol>
+    </div>
+</main>
+
+<div class="footer">
+    &copy; 2024 Cold Treat Sdn. Bhd. All rights reserved.
+</div>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById('search-bar').value;
+            alert('You searched for: ' + query);
+        }
+    </script>
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+.container3 {
+  width: 750px;
+  margin: auto;
+  padding-bottom: 20px; 
+  background-color: aliceblue;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    </style>
+    
+</body>
+</html>

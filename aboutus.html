@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Us</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+
+</head>
+<body>
+    <div class="header" id="navbar">
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="width:100%;max-width:140px">
+        <nav>
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="placeorder.html">Place Order</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="register.html">Register</a>
+            <div class="navbar-right">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; About Us
+        </div>
+        <h1>Cold Treat</h1>
+        <div class="content">
+            <p>Vitamin A, vitamin D, calcium, protein, and other necessary nutrients are all included in the delicious range of ice cream flavors that ColdTreat offers. Customers may have a nutritional treat as they indulge in their ice cream, which is made with carefully chosen, premium, and fresh ingredients. It's worth noting that ColdTreat offers natural and healthy ice cream as it doesn't use artificial colors. The ingredients that have been chosen also meet the strictest requirements for purity and dietary compliance and are all 100% halal and clean. Because of its dedication to nutrition and quality, ColdTreat is a reliable alternative for people looking for tasty ice cream that also happens to be healthy.</p>
+            <img src="images/logo.jpg" alt="Logo" style="width:100%;max-width:400px">
+            <p>The concept of ColdTreat originated with the desire for people to get together and share their love of ice cream, spending their leisure time indulging in ice cream with friends or family. The staff at ColdTreat put forth a lot of effort every day to produce mouthwatering ice cream in order to satisfy customers.</p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Cold Treat Sdn. Bhd. All rights reserved.
+    </div>
+
+    <script>
+        window.onscroll = function() {makeSticky()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function makeSticky() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+function performSearch() {
+    var query = document.getElementById('search-bar').value;
+    alert('You searched for: ' + query);
+}
+        
+    </script>
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</body>
+</html>

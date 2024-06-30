@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product</title>
+
+    <style>
+        body {
+            background-image: url(images/bckg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header" id="navbar">
+        <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="width:100%;max-width:140px"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="placeorder.html">Place Order</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="register.html">Register</a>
+            <div class="navbar-right">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="gallery">
+        <div class="content">
+            <img src="images/VANILA ICE CREAM.png" alt="Vanilla Ice Cream">
+            <h3>VANILLA</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE SOOTHING</p>
+            <h4>RM5 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-1">Order Now!</button></a>
+        </div>
+        <div class="content">
+            <img src="images/CHOCOLATE ICE CREAM.png" alt="Chocolate Ice Cream">
+            <h3>CHOCOLATE</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE DELICIOUS</p>
+            <h4>RM5 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-2">Order Now!</button></a>
+        </div>
+        <div class="content">
+            <img src="images/STRAWBERRY ICE CREAM.png" alt="Strawberry Ice Cream">
+            <h3>STRAWBERRY</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE SWEET AND SOUR</p>
+            <h4>RM5 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-3">Order Now!</button></a>
+        </div>
+        <div class="content">
+            <img src="images/MATCHA ICE CREAM.png" alt="Matcha Ice Cream">
+            <h3>MATCHA</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE LIKE JAPAN</p>
+            <h4>RM7 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-4">Order Now!</button></a>
+        </div>
+        <div class="content">
+            <img src="images/CARAMEL ICE CREAM.png" alt="Caramel Ice Cream">
+            <h3>CARAMEL</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE SWEET AND SALTY</p>
+            <h4>RM7 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-5">Order Now!</button></a>
+        </div>
+        <div class="content">
+            <img src="images/MINT ICE CREAM.png" alt="Mint Ice Cream">
+            <h3>MINT</h3>
+            <h3>FLAVOUR</h3>
+            <p>TASTE FRESHNESS</p>
+            <h4>RM7 per cone.</h4>
+            <a href="ordernow.xml"><button class="buy-6">Order Now!</button></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Cold Treat Sdn. Bhd. All rights reserved.
+    </div>
+
+    <script>
+        window.onscroll = function() {makeSticky()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function makeSticky() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        
+        function performSearch() {
+            var query = document.getElementById('search-bar').value;
+            alert('You searched for: ' + query);
+        }
+    </script>
+    
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .content {
+            width: 250px;
+            margin: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 14px 28px grey, 0 10px 28px darkgrey;
+            transition: .4s;
+            background: rgb(215, 58, 18);
+        }
+
+        .content img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            margin: 10px 0 0 0;
+        }
+
+        p {
+            text-align: center;
+            color: darkgrey;
+            padding: 0 8px;
+        }
+
+        h4 {
+            font-size: 18px;
+            text-align: center;
+            color: #222f3e;
+            margin: 10px 0;
+        }
+
+        button {
+            text-align: center;
+            font-size: 16px;
+            color: #090000;
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            margin-top: 5px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            float: right;
+        }
+
+        #search-bar {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #888;
+        }
+
+        .buy-1 { background: #fafafa; }
+        .buy-2 { background: #a24e21; }
+        .buy-3 { background: #ea5dad; }
+        .buy-4 { background: #99a221; }
+        .buy-5 { background: #c5940e; }
+        .buy-6 { background: #4cf023; }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+
+</body>
+</html>

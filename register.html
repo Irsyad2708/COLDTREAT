@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+    
+    .form-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    .form-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 400px;
+        width: 100%;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 15px;
+        margin-top: 0px;
+    }
+    .close-btn {
+        background-color: red;
+        color: white;
+        float: right;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    </style>
+
+    </head>
+    <body>
+        <div class="header" id="navbar">
+            <a href="index.html"><img src="images/logo.jpg" alt="Logo" style="width:100%;max-width:140px"></a>
+            <nav>
+                    <a href="index.html">Home</a>
+                    <a href="product.html">Products</a>
+                    <a href="placeorder.html">Place Order</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="register.html">Register</a>
+                <div class="navbar-right">
+                    <input type="text" placeholder="Search..." id="search-bar">
+                    <button onclick="performSearch()">Search</button>
+                </div>
+            </nav>
+        </div>
+    </body>
+    <div class="button1">
+    <button id="open-form-btn">Register Now</button>
+    </div>
+    
+    <div class="form-container" id="form-container">
+        <div class="form-content" id="form-content">
+            <button class="close-btn" id="close-form-btn">&times;</button>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('open-form-btn').addEventListener('click', function() {
+            fetch('registration_form.xml')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data, 'application/xml');
+                    const formContent = document.getElementById('form-content');
+
+                    // Remove previous form content
+                    while (formContent.firstChild) {
+                        formContent.removeChild(formContent.firstChild);
+                    }
+
+                    const formTitle = xml.getElementsByTagName('title')[0].textContent;
+                    const fields = xml.getElementsByTagName('field');
+                    const buttons = xml.getElementsByTagName('button');
+
+                    let form = document.createElement('form');
+
+                    let title = document.createElement('h2');
+                    title.textContent = formTitle;
+                    form.appendChild(title);
+
+                    for (let field of fields) {
+                        let label = document.createElement('label');
+                        label.textContent = field.getElementsByTagName('label')[0].textContent;
+                        form.appendChild(label);
+
+                        let input = document.createElement('input');
+                        input.type = field.getElementsByTagName('input')[0].getAttribute('type');
+                        input.id = field.getElementsByTagName('input')[0].getAttribute('id');
+                        form.appendChild(input);
+                    }
+
+                    for (let button of buttons) {
+                        let btn = document.createElement('button');
+                        btn.type = button.getAttribute('type');
+                        btn.textContent = button.textContent;
+                        form.appendChild(btn);
+                    }
+
+                    formContent.appendChild(form);
+
+                    document.getElementById('form-container').style.display = 'flex';
+                });
+        });
+
+        document.getElementById('close-form-btn').addEventListener('click', function() {
+            document.getElementById('form-container').style.display = 'none';
+        });
+
+function performSearch() {
+    var query = document.getElementById('search-bar').value;
+    alert('You searched for: ' + query);
+}
+    </script>
+        </body>
+    </html>

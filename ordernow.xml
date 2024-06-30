@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="ordernow.xsl"?>
+
+	<icecream>
+		<details>
+			<customername>Faiq</customername>
+			<flavour>Vanilla</flavour>
+			<taste>Soothing</taste>
+			<total>1</total>
+			<price>5</price>
+			<paymentmethod>Cash</paymentmethod>
+		</details>
+		
+		<details>
+			<customername>Jasmeen</customername>
+			<flavour>Strawberry</flavour>
+			<taste>Sweet and Sour</taste>
+			<total>2</total>
+			<price>10</price>
+			<paymentmethod>Cash</paymentmethod>
+		</details>
+		
+		<details>
+			<customername>Amirah</customername>
+			<flavour>Chocolate</flavour>
+			<taste>Delicious</taste>
+			<total>1</total>
+			<price>5</price>
+			<paymentmethod>Card</paymentmethod>
+		</details>
+		
+		<details>
+			<customername>Ain</customername>
+			<flavour>Matcha</flavour>
+			<taste>Taste Like Japan</taste>
+			<total>2</total>
+			<price>14</price>
+			<paymentmethod>Card</paymentmethod>
+		</details>
+		
+		<details>
+			<customername>Ahmad</customername>
+			<flavour>Caramel</flavour>
+			<taste>Sweet and Salty</taste>
+			<total>1</total>
+			<price>7</price>
+			<paymentmethod>Cash</paymentmethod>
+		</details>
+		
+	</icecream>
