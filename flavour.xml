@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<icecreamorder xmlns="https://www.w3schools.com" 
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xsi:schemaLocation="https://www.w3schools.com flavour.xsd">
+
+    <icecream>
+        <customername>Faiq</customername>
+        <flavour>Vanilla</flavour>
+        <taste>Soothing</taste>
+        <total>1</total>
+        <price>RM 5</price>
+        <paymentmethod>Cash</paymentmethod>
+    </icecream>
+
+    <icecream>
+        <customername>Jasmeen</customername>
+        <flavour>Strawberry</flavour>
+        <taste>Sweet and Sour</taste>
+        <total>2</total>
+        <price>RM 10</price>
+        <paymentmethod>Cash</paymentmethod>
+    </icecream>
+
+    <icecream>
+        <customername>Amirah</customername>
+        <flavour>Chocolate</flavour>
+        <taste>Delicious</taste>
+        <total>1</total>
+        <price>RM 5</price>
+        <paymentmethod>Card</paymentmethod>
+    </icecream>
+
+    <icecream>
+        <customername>Ain</customername>
+        <flavour>Matcha</flavour>
+        <taste>Taste Like Japan</taste>
+        <total>2</total>
+        <price>RM 14</price>
+        <paymentmethod>Card</paymentmethod>
+    </icecream>
+
+    <icecream>
+        <customername>Ahmad</customername>
+        <flavour>Caramel</flavour>
+        <taste>Sweet and Salty</taste>
+        <total>1</total>
+        <price>RM 7</price>
+        <paymentmethod>Cash</paymentmethod>
+    </icecream>
+
+</icecreamorder>

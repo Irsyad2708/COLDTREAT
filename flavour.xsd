@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+  <xs:element name="icecreamorder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="icecream" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customername" type="xs:string" minOccurs="1"/>
+              <xs:element name="flavour" minOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Vanilla"/>
+                    <xs:enumeration value="Chocolate"/>
+                    <xs:enumeration value="Strawberry"/>
+                    <xs:enumeration value="Matcha"/>
+                    <xs:enumeration value="Caramel"/>
+                    <xs:enumeration value="Mint"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="taste" type="xs:string" minOccurs="1"/>
+              <xs:element name="total" minOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="5"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" minOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="RM [0-9]+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paymentmethod" minOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Cash"/>
+                    <xs:enumeration value="Card"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
